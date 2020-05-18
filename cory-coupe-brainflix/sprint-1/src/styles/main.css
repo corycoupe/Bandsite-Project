@@ -413,8 +413,12 @@ body {
   font-size: 0.875rem;
 }
 
-.comments .text-field {
+.comments__input-field {
   height: 6rem;
+  width: 100%;
+}
+
+.comments .text-field {
   border-radius: 4px;
   border: solid 2px #e1e1e1;
   font-family: "AvenirNextLTPro-Regular";
@@ -423,7 +427,6 @@ body {
   background-color: #fafafa;
   padding: 0.7rem 0.7rem;
   margin-top: 0.2rem;
-  width: 100%;
 }
 
 .comments .text-field:focus {
@@ -478,8 +481,10 @@ body {
     font-size: 0.875rem;
   }
   .comments .text-field {
-    width: 100%;
     font-size: 0.875rem;
+  }
+  .comments__input-field {
+    width: 100%;
   }
 }
 

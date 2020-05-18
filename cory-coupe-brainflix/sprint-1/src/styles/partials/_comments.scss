@@ -46,8 +46,11 @@
     margin-top: 1rem;
     font-size: $mobile-h2-subheader;
   }
-  .text-field {
+  &__input-field {
     height: 6rem;
+    width: 100%;
+  }
+  .text-field {
     border-radius: 4px;
     border: solid 2px $text-color-alt;
     font-family: $regular-text;
@@ -56,7 +59,6 @@
     background-color: $text-background-fill;
     padding: 0.7rem 0.7rem;
     margin-top: 0.2rem;
-    width: 100%;
   }
   .text-field:focus {
     border-color: $brainflix-lightblue;
@@ -96,8 +98,10 @@
       font-size: $h4-paragraph;
     }
     .text-field {
-      width: 100%;
       font-size: $h4-paragraph;
+    }
+    &__input-field {
+      width: 100%;
     }
   }
 }
