@@ -1,0 +1,43 @@
+@import "./partials/variables";
+@import "./partials/mixins";
+@import "./partials/typography";
+@import "./partials/header";
+@import "./partials/video";
+@import "./partials/comments";
+@import "./partials/new-comments";
+@import "./partials/video-list";
+@import "./partials/description";
+
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  font-family: $regular-text;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0;
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+}
+textarea {
+  resize: none;
+}
+@include desktop {
+  .main-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+}

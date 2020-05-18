@@ -1,0 +1,46 @@
+.video-list {
+  &__title {
+    font-size: $mobile-h2-subheader;
+    color: $text-label;
+    font-family: $regular-text;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    margin-left: 1rem;
+  }
+  &__block {
+    display: flex;
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  &__image {
+    margin-right: 1rem;
+  }
+  &__image--src {
+    width: 7.5rem;
+    height: 4.375rem;
+  }
+  &__text-area--head {
+    font-family: $demi-text;
+    @include font($mobile-h2-subheader, $paragraph-text);
+  }
+  &__text-area--foot {
+    @include font($mobile-h4-paragraph, $paragraph-text);
+    margin-bottom: 0;
+  }
+}
+
+@include tablet {
+  .video-list {
+    &__text-area {
+      display: flex;
+      flex-direction: column;
+      width: 25%;
+    }
+    &__text-area--head {
+      font-size: $h3-subheader;
+    }
+    &__text-area--foot {
+      font-size: $h4-paragraph;
+    }
+  }
+}

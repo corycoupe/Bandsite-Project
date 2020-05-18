@@ -1,0 +1,95 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  &__logo {
+    display: flex;
+    flex-direction: row;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+  }
+  &__logo-title {
+    @include font($mobile-h2-subheader, $paragraph-text);
+    font-family: $bold-text;
+  }
+  &__search {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  &__search-bar {
+    width: 90%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    height: 2.5rem;
+    border-radius: 6px;
+    overflow-wrap: break-word;
+    border: 1px solid $text-color-alt;
+    background: url(../assets/icons/SVG/Icon-search.svg) no-repeat scroll 7px
+      7px;
+    padding-left: 30px;
+    font-size: $mobile-h4-paragraph;
+  }
+  &__search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    background-color: $brainflix-lightblue;
+    color: $text-background-fill;
+    border-radius: 6px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: none;
+    box-shadow: none;
+  }
+  &__search-mohan {
+  }
+  &__search-button--img {
+    margin-right: 0.5rem;
+  }
+  &__search-button--text {
+    font-size: $mobile-h4-paragraph;
+  }
+}
+.mohan-image {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 75%;
+}
+
+@include tablet {
+  .header {
+    flex-direction: row;
+    height: 80px;
+    align-items: flex-end;
+
+    &__logo {
+      margin-right: 10.563rem;
+      margin-left: 1rem;
+    }
+    &__search {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: flex-end;
+    }
+    &__search-button {
+      width: 7rem;
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+    }
+    &__search-bar {
+      height: 3rem;
+      width: 15rem;
+      margin: 0;
+      font-size: $h4-paragraph;
+    }
+    &__search-button--text {
+      font-size: $h4-paragraph;
+    }
+  }
+}

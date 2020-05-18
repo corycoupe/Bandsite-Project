@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.video-player {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+  &__video {
+    max-width: 100%;
+  }
+  &__controls {
+    position: absolute;
+    z-index: 99;
+    bottom: 0.375rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__btn-play-group {
+    margin-left: 0.5rem;
+  }
+  &__btn {
+    padding: 0.625rem;
+    margin-bottom: 0.5rem;
+    // margin: 0 0.187rem;
+    border-radius: 0.187rem;
+    color: white;
+    background: rgba(black, 0.6);
+    border: unset;
+    box-shadow: unset;
+    &:hover,
+    &:focus,
+    &:active {
+      cursor: pointer;
+      background: rgba(black, 1);
+      outline: 0;
+    }
+  }
+  &__btn-group {
+    display: flex;
+    margin-right: 0.5rem;
+  }
+  &__progress-bar {
+    position: relative;
+    flex-grow: 1;
+    margin: 0 0.187rem;
+    margin-bottom: 0.5rem;
+    padding: 0.625rem;
+    border-radius: 0.187rem;
+    color: white;
+    background: rgba(black, 0.6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__progress-timeline {
+    height: 0.187rem;
+    margin-right: 0.625rem;
+    background: grey;
+    flex-grow: 1;
+  }
+  &__progress-scrubber {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    left: 0.624rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__progress-text {
+    text-align: center;
+  }
+}
+
+@include tablet {
+  .video {
+    height: 400px;
+  }
+  .video-player {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+
+    &__video {
+      width: 43.75rem;
+      height: 100%;
+    }
+    &__controls {
+      justify-content: center;
+    }
+    &__progress-bar {
+      flex-grow: 0;
+      width: 32.438rem;
+      height: 2.3rem;
+      margin-right: 1rem;
+    }
+    &__progress-timeline {
+      margin-right: 1rem;
+    }
+    &__btn {
+      width: 2.8rem;
+      height: 2.3rem;
+    }
+    &__btn-play-group {
+      margin: 0;
+      margin-right: 1rem;
+      margin-left: 1rem;
+    }
+    &__btn-group {
+      margin-right: 1rem;
+    }
+  }
+}

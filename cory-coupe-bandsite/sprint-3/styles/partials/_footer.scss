@@ -1,0 +1,171 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: $paragraph-text;
+  margin-top: 11%;
+
+  &__header {
+    display: flex;
+    @include font(3.2rem, $text-background-fill);
+    font-family: $bold-text;
+    padding-top: 15%;
+    margin-left: 2.5%;
+  }
+  &__logos {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+  }
+  &__logo {
+    display: flex;
+    width: 6%;
+    margin-left: 4%;
+    margin-right: 5%;
+  }
+  &__paragraph-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    margin-left: 2.5%;
+  }
+  &__paragraph {
+    width: 80%;
+  }
+  &__paragraph-title {
+    display: flex;
+    @include font(1.2rem, $text-background-fill);
+    margin-top: 2%;
+    font-family: $demi-text;
+    font-weight: lighter;
+    margin-bottom: 3%;
+  }
+  &__paragraph-text {
+    display: flex;
+    @include font(1.3rem, $text-color-alt);
+    width: 80%;
+    font-family: $regular-text;
+    font-weight: 100;
+    margin-bottom: 9%;
+    margin-top: 9%;
+  }
+  &__paragraph-text--end {
+    width: 65%;
+    margin-left: 2.5%;
+    font-weight: 100;
+  }
+  &__bandsite {
+    color: $paragraph-text;
+  }
+}
+@include tablet {
+  .footer {
+    margin-top: 1%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &__paragraph-title {
+      font-size: $h2-header;
+      margin-bottom: 1%;
+    }
+    &__header {
+      display: flex;
+      font-size: 3.9rem;
+      padding-top: 5%;
+      margin-left: 0;
+      width: 30%;
+    }
+
+    &__logos {
+      width: 18%;
+      margin-left: 6%;
+    }
+
+    &__logo {
+      width: 15%;
+      margin-right: 19%;
+    }
+
+    &__bandsite {
+      display: flex;
+      @include font(2.6rem, $text-background-fill);
+      font-family: $regular-text;
+      align-items: flex-end;
+      width: 41%;
+      height: 8rem;
+      justify-content: flex-end;
+      font-weight: lighter;
+      margin: 0;
+    }
+    &__paragraph-section {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin-left: 0;
+      margin-top: 5%;
+      width: 100%;
+    }
+    &__paragraph {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+    }
+    &__paragraph-text {
+      margin-top: 3%;
+    }
+    &__title-group {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+@include desktop {
+  .footer {
+    &__header {
+      font-size: 2.8rem;
+      margin-left: 2%;
+      justify-content: flex-start;
+      width: 20%;
+      margin-right: 3%;
+    }
+    &__logos {
+      width: 15%;
+      margin-left: 0rem;
+      justify-content: flex-start;
+    }
+    &__logo {
+      width: 20%;
+    }
+    &__bandsite {
+      font-size: 2rem;
+      justify-content: flex-end;
+      width: 35.5%;
+      margin-left: 4%;
+    }
+    &__paragraph {
+      width: 19%;
+      margin-left: 5%;
+    }
+    &__paragraph-section {
+      display: flex;
+      justify-content: flex-start;
+      margin-left: 7%;
+    }
+    &__paragraph-title {
+      font-size: 1.3rem;
+    }
+    &__paragraph-text {
+      margin-top: 7%;
+      font-size: 1.2rem;
+    }
+    &__paragraph-text--end {
+      margin-left: 11.5%;
+      margin-bottom: 5%;
+      margin-top: 2%;
+    }
+  }
+}

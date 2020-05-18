@@ -1,0 +1,99 @@
+.description {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-bottom: 2.5rem;
+
+  &__header {
+    border-bottom: 2px solid $text-color-alt;
+    margin-right: 1rem;
+  }
+  &__header-title {
+    @include font($mobile-h1-header, $paragraph-text);
+    font-family: $bold-text;
+    margin-bottom: 1rem;
+  }
+  &__header-uploaded {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+  }
+  &__header-uploaded--creator {
+    @include font($mobile-h2-subheader, $paragraph-text);
+    margin: 0;
+    margin-right: 0.5rem;
+  }
+  &__header-uploaded--date {
+    @include font($mobile-h5-labels, $text-label);
+    margin: 0;
+  }
+  &__header-container {
+    display: flex;
+    margin-bottom: 1.5rem;
+  }
+  &__header-views {
+    display: flex;
+  }
+  &__header-likes {
+    display: flex;
+  }
+  &__text {
+    @include font($mobile-h2-subheader, $paragraph-text);
+    margin: 0;
+    margin-top: 1.5rem;
+  }
+
+  .views-likes {
+    @include font($mobile-h4-paragraph, $paragraph-text);
+  }
+  .views-likes--image {
+    margin-right: 0.5rem;
+  }
+  .views-likes--paragraph {
+    margin: 0;
+    margin-right: 1rem;
+    color: $text-label;
+  }
+}
+
+@include tablet {
+  .description {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__header-title {
+      margin-bottom: 1.5rem;
+      font-size: $h1-header;
+      width: 100%;
+    }
+    &__header-uploaded {
+      margin-bottom: 1.5rem;
+    }
+    &__header-container {
+      display: flex;
+      justify-self: flex-end;
+    }
+    &__header-views--count {
+      margin-right: 1.5rem;
+    }
+    &__header-uploaded--creator {
+      font-size: $h3-subheader;
+    }
+    &__header-uploaded--date {
+      font-size: $h4-paragraph;
+    }
+    &__text {
+      font-size: $h4-paragraph;
+      width: 71%;
+      line-height: 25px;
+    }
+    .views-likes--paragraph {
+      font-size: $h4-paragraph;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+.new-comments {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+    margin: 0;
+    justify-content: center;
+  }
+  &__card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 2px solid $text-color-alt;
+    margin: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  &__card-image {
+    display: flex;
+    background-color: $text-color-alt;
+    background-size: cover;
+    border-radius: 25px;
+    padding: 1.4rem;
+    height: 20%;
+    margin-top: 2rem;
+  }
+  &__card-content {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    overflow-wrap: break-word;
+  }
+  &__card-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10%;
+    margin-left: 6.5%;
+  }
+  &__card-title--name {
+    font-family: $regular-text;
+    width: 40%;
+    height: 5%;
+    @include font($mobile-h4-paragraph, $paragraph-text);
+    width: 60%;
+  }
+  &__card-title--date {
+    margin: 0;
+    font-family: $regular-text;
+    justify-self: flex-end;
+    @include font($mobile-h5-labels, $text-label);
+  }
+  &__card-comment {
+    @include font($mobile-h4-paragraph, $paragraph-text);
+    margin-left: 1rem;
+    font-family: $regular-text;
+    font-weight: lighter;
+    line-height: 1.3rem;
+    width: 95%;
+  }
+}
+@include tablet {
+  .new-comments {
+    &__list {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+    }
+    &__card {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    &__card-content {
+      width: 39rem;
+    }
+    &__card-comment {
+      font-size: $h4-paragraph;
+      margin-top: 0.3rem;
+    }
+    &__card-title--date {
+      margin: 0;
+      font-size: $h5-labels;
+      margin-left: 1rem;
+    }
+    &__card-title--name {
+      font-size: $h4-paragraph;
+      height: auto;
+      width: auto;
+      margin-left: 1rem;
+    }
+    &__card-image {
+      margin: 0;
+      margin-top: 1rem;
+    }
+    &__card-title {
+      display: flex;
+      font-size: $h3-subheader;
+      margin: 0;
+      margin-top: 1rem;
+      justify-content: flex-start;
+    }
+  }
+}

@@ -1,0 +1,185 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+
+  &__head {
+    margin-top: 2.5rem;
+    margin-bottom: 6%;
+  }
+  .title {
+    display: flex;
+    flex-wrap: wrap;
+    @include font(1.5rem, $paragraph-text);
+    width: 100%;
+    margin-left: 3%;
+    font-family: $bold-text;
+  }
+  &__picture {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin-left: 2.5%;
+  }
+  &__quote {
+    @include font(1.4rem, $paragraph-text);
+    align-self: center;
+    margin-bottom: 6%;
+    margin-left: 2.5%;
+    font-family: $demi-text;
+  }
+  &__signature {
+    @include font(1.1rem, $paragraph-text);
+    font-family: $demi-text;
+    margin-left: 2.5%;
+    margin-right: 3%;
+  }
+  &__paragraph-section {
+    width: 100%;
+  }
+  &__paragraph-title {
+    @include font(1.3rem, $paragraph-text);
+    font-family: $demi-text;
+    margin-top: 6%;
+    margin-left: 2.5%;
+    margin-right: 3%;
+  }
+  &__paragraph {
+    @include font(0.9rem, $paragraph-text);
+    line-height: 1.5rem;
+    font-family: $regular-text;
+    font-weight: 100;
+    margin-left: 2.5%;
+    margin-right: 4%;
+  }
+  &__gallery {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.1%;
+    width: 100%;
+    background-color: $text-background-fill;
+  }
+  &__gallery-title {
+    padding-top: 3.7rem;
+    padding-bottom: 2rem;
+    background-color: $text-background-fill;
+  }
+  &__gallery-image {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-bottom: 4%;
+  }
+}
+@include tablet {
+  .main {
+    &__head {
+      margin-bottom: 3%;
+      margin-top: 6%;
+      margin-left: 2.5%;
+      font-size: $h1-header;
+    }
+    &__picture {
+      width: 94%;
+      margin-right: 3%;
+    }
+    &__quote {
+      font-size: 2.7rem;
+      font-family: $bold-text;
+      font-weight: bolder;
+      margin-right: 10%;
+      margin-left: 1%;
+      margin-bottom: 2%;
+      margin-top: 5%;
+    }
+    &__signature {
+      margin-left: 2.5%;
+      font-size: 2rem;
+    }
+    &__paragraph-title {
+      font-size: 2.6rem;
+      font-family: $bold-text;
+      font-weight: bolder;
+      margin-bottom: 2%;
+    }
+    &__paragraph-section {
+      display: flex;
+      flex-direction: row;
+    }
+    &__paragraph {
+      width: 50%;
+      font-size: 1.5rem;
+      line-height: 2.3rem;
+      margin-left: 2.5%;
+      margin-right: 4%;
+      font-weight: lighter;
+    }
+    &__gallery {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__gallery-image {
+      display: flex;
+      width: 30%;
+    }
+    &__gallery-title {
+      margin-left: 2.5%;
+    }
+    .title {
+      font-size: $h1-header;
+    }
+  }
+}
+@include desktop {
+  .main {
+    &__head {
+      margin-left: 12%;
+      margin-top: 5%;
+      margin-bottom: 2%;
+      font-size: $h1-header;
+    }
+    &__picture {
+      width: 57%;
+      height: 6%;
+      align-self: flex-start;
+      margin-left: 20%;
+    }
+    &__quote {
+      margin-right: 17%;
+      margin-left: 5%;
+      margin-top: 3%;
+      font-size: 2rem;
+      width: 60%;
+    }
+    &__signature {
+      margin-left: 20%;
+      font-size: 1.3rem;
+    }
+    &__paragraph-title {
+      margin-left: 20%;
+    }
+    &__paragraph {
+      width: 26%;
+      margin-left: 20%;
+      font-size: 1.125rem;
+    }
+    &__paragraph-2 {
+      margin-left: 3%;
+    }
+    &__gallery-title {
+      margin-left: 12%;
+      font-size: 2.8rem;
+    }
+    &__gallery {
+      display: flex;
+      margin-left: 9.7%;
+      justify-content: flex-start;
+    }
+    &__gallery-image {
+      width: 24%;
+    }
+  }
+}

@@ -1,0 +1,163 @@
+.tickets {
+  &__title {
+    font-family: $bold-text;
+    font-size: $mobile-h1-header;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    border-bottom: 1.2px solid $text-color-alt;
+  }
+  &__card-title-mobile {
+    margin-left: 2.5%;
+    margin-top: 1.5rem;
+    @include font($mobile-h2-subheader, $text-label);
+    font-family: $regular-text;
+  }
+  &__card--text {
+    margin-left: 2.5%;
+    @include font($mobile-h4-paragraph, $paragraph-text);
+    font-family: $regular-text;
+    margin-bottom: 24px;
+  }
+  &__card--text-bold {
+    font-family: $bold-text;
+  }
+  &__card-button-container {
+    display: flex;
+    height: 3rem;
+    width: 18rem;
+    background-color: $paragraph-text;
+    font-family: $regular-text;
+    border-radius: 6px;
+    border: none;
+    margin-left: 3%;
+    margin-top: 4%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  &__card-button {
+    text-decoration: none;
+    text-align: center;
+    @include font($mobile-h2-subheader, white);
+  }
+  &__card-title-container {
+    display: none;
+  }
+  &__card-title {
+    display: none;
+  }
+}
+@include tablet {
+  .tickets {
+    &__title {
+      font-size: $h1-header;
+      margin-top: 3.2rem;
+      margin-bottom: 1rem;
+      margin-left: 1.5rem;
+    }
+    &__section {
+      margin-bottom: 3rem;
+    }
+    &__card-title-mobile {
+      display: none;
+    }
+    &__card {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $text-label;
+      margin-right: 1.5rem;
+      margin-left: 1.5rem;
+    }
+    &__card-container {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+    &__card-button-container {
+      width: 27%;
+      margin-bottom: 4%;
+    }
+    &__card-title-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+      width: 56%;
+    }
+    &__card-title {
+      display: flex;
+      @include font($h3-subheader, $text-label);
+      font-family: $regular-text;
+    }
+
+    &__card-title--venue {
+      margin-left: 3rem;
+    }
+    &__card-title--location {
+      margin-right: 1rem;
+    }
+    &__card--text {
+      margin: 0;
+      font-size: 1rem;
+    }
+    &__card--text-bold {
+      font-size: 1rem;
+    }
+    &__card-container {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+@include desktop {
+  .tickets {
+    display: flex;
+    flex-direction: row;
+    &__title {
+      display: flex;
+      width: 20%;
+      margin-left: 12%;
+    }
+    &__section {
+      width: 50.25rem;
+      margin-right: 11.25rem;
+      margin-top: 3rem;
+    }
+    &__card-container {
+      height: 20%;
+      margin-right: 11.25rem;
+    }
+    &__card {
+      padding: 0;
+      height: 60%;
+      margin: 0;
+    }
+    &__card--text {
+      width: 20%;
+    }
+    &__card-title-container {
+      margin-left: 0;
+      width: 64%;
+    }
+    &__card-button-container {
+      width: 10rem;
+      height: 48px;
+    }
+    &__card-title--venue {
+      margin-left: 0.1rem;
+    }
+    &__card-title--location {
+      margin-right: 1.2rem;
+    }
+  }
+}

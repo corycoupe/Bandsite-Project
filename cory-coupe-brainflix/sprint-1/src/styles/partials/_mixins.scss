@@ -1,0 +1,19 @@
+@mixin mobile {
+  @media screen and (min-width: $mobile-breakpoint) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+@mixin font($font-size, $color) {
+  font-size: $font-size;
+  color: $color;
+}

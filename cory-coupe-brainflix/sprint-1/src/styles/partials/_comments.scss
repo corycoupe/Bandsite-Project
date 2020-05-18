@@ -1,0 +1,100 @@
+.comments {
+  &__post-comments {
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid $text-color-alt;
+    margin-left: 1rem;
+    margin-right: 2rem;
+  }
+  &__header {
+    display: flex;
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+  }
+  &__header-comment-count {
+    font-size: $mobile-h2-subheader;
+    font-family: $bold-text;
+  }
+  &__mohan {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    margin-top: 1rem;
+  }
+  &__input {
+    display: flex;
+    flex-direction: column;
+  }
+  &__input-title {
+    display: flex;
+    font-size: $mobile-h5-labels;
+    color: $text-label;
+    font-family: $regular-text;
+  }
+
+  &__input-submit {
+    height: 3rem;
+    width: 15rem;
+    background-color: $brainflix-lightblue;
+    color: white;
+    font-family: $regular-text;
+    border-radius: 6px;
+    border: none;
+    margin-top: 1rem;
+    font-size: $mobile-h2-subheader;
+  }
+  .text-field {
+    height: 6rem;
+    border-radius: 4px;
+    border: solid 2px $text-color-alt;
+    font-family: $regular-text;
+    color: $paragraph-text;
+    font-size: $mobile-h4-paragraph;
+    background-color: $text-background-fill;
+    padding: 0.7rem 0.7rem;
+    margin-top: 0.2rem;
+    width: 100%;
+  }
+}
+
+@include tablet {
+  .comments {
+    &__header-comment-count {
+      font-size: $h3-subheader;
+    }
+    &__input {
+      display: flex;
+      flex-direction: row;
+    }
+    &__input-title {
+      font-size: $h5-labels;
+    }
+    &__input-group {
+      display: flex;
+      flex-direction: column;
+      width: 27.5rem;
+      height: 4rem;
+      margin-right: 1rem;
+    }
+    &__post-comments {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      width: 96%;
+      margin-right: 0.5rem;
+    }
+    &__input-submit {
+      width: 10rem;
+      margin-right: 2.5rem;
+      font-size: $h4-paragraph;
+    }
+    .text-field {
+      width: 100%;
+      font-size: $h4-paragraph;
+    }
+  }
+}

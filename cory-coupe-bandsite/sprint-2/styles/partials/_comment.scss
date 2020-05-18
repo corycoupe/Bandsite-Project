@@ -1,0 +1,266 @@
+.comments {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.comments__title {
+  display: flex;
+  flex-wrap: wrap;
+  @include font(1.5rem, $paragraph-text);
+  width: 100%;
+  margin-left: 3%;
+  margin-bottom: 40px;
+  margin-top: 32px;
+  font-family: $bold-text;
+}
+.form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+
+.form__submit {
+  height: 3rem;
+  width: 75%;
+  background-color: $paragraph-text;
+  color: white;
+  font-family: $regular-text;
+  border-radius: 6px;
+  border: none;
+  margin-right: 3%;
+  margin-top: 5%;
+}
+.form__head {
+  margin-right: 43%;
+}
+.form__comment-head {
+  margin-right: 35%;
+}
+.form__comment-container {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+}
+.form__name {
+  height: 3rem;
+}
+.form__comment {
+  height: 6rem;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+.new-comments {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+.header-template {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  font-size: 0.75rem;
+  color: $text-label;
+  margin-bottom: 0.4rem;
+  font-family: $regular-text;
+}
+.text-field {
+  width: 75%;
+  align-self: right;
+  margin-right: 3%;
+  border-radius: 4px;
+  border: solid 2px $text-color-alt;
+  font-family: $regular-text;
+  color: $paragraph-text;
+  font-size: 0.8rem;
+  background-color: $text-background-fill;
+  padding: 0.7rem 0.7rem;
+}
+.text-field:focus {
+  border-color: black;
+  outline: none;
+}
+.form__img {
+  display: flex;
+  align-self: flex-start;
+  position: relative;
+  border-radius: 25px;
+  background-image: url(../assets/images/Mohan-muruge.jpg);
+  background-size: cover;
+  background-position: left;
+  padding: 1.7rem;
+  top: 5.4rem;
+  left: 1.5rem;
+}
+
+.new-comments {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+}
+.new-comments__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 0;
+  justify-content: center;
+}
+.new-comments__card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom: 1px solid $text-color-alt;
+  border-top: 1px solid $text-color-alt;
+  margin: 0;
+  width: 97%;
+}
+.new-comments__image {
+  display: flex;
+  background-color: $text-color-alt;
+  background-size: cover;
+  border-radius: 25px;
+  padding: 1.4rem;
+  height: 20%;
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+}
+.new-comments__text-area {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  overflow-wrap: break-word;
+}
+.new-comments__text-title-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15%;
+  margin-left: 6.5%;
+}
+.new-comments__name {
+  font-family: $regular-text;
+  width: 40%;
+  height: 5%;
+  @include font(1rem, $paragraph-text);
+  width: 60%;
+}
+.new-comments__time {
+  font-family: $regular-text;
+  justify-self: flex-end;
+  @include font($mobile-h5-labels, $text-label);
+}
+.new-comments__comment {
+  @include font(1rem, $paragraph-text);
+  margin-left: 1rem;
+  font-family: $regular-text;
+  font-weight: lighter;
+  line-height: 1.3rem;
+  width: 95%;
+}
+
+@include tablet {
+  .comments {
+    // border-bottom: 1px solid $text-color-alt;
+  }
+  .form {
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    align-items: center;
+  }
+  .text-field {
+    width: 70%;
+    font-size: $h4-paragraph;
+  }
+  .form__submit {
+    width: 10rem;
+    align-self: flex-end;
+    margin-right: 16.5%;
+    margin-top: 24px;
+  }
+  .form__img {
+    top: 5.4rem;
+    left: 2.6rem;
+  }
+  .new-comments__list {
+    align-items: center;
+  }
+  .new-comments__card {
+    width: 75%;
+  }
+  .new-comments__comment {
+    font-size: $h4-paragraph;
+  }
+  .new-comments__time {
+    font-size: $h5-labels;
+  }
+  .new-comments__image {
+    margin-top: 4rem;
+  }
+  .new-comments__name {
+    font-size: $h3-subheader;
+  }
+  .form__head {
+    margin-right: 68%;
+    align-self: center;
+  }
+  .form__comment-head {
+    margin-right: 64%;
+  }
+  .comments__title {
+    font-size: $h1-header;
+  }
+}
+
+@include desktop {
+  .form__head {
+    margin-right: 40.8%;
+    align-self: center;
+  }
+  .form__comment-head {
+    margin-right: 39.5%;
+  }
+  .text-field {
+    width: 40%;
+  }
+  .form__img {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    top: 5.4rem;
+    left: 29rem;
+  }
+  .form__submit {
+    margin-right: 31.6%;
+  }
+  .comments__title {
+    margin-left: 11.5%;
+  }
+  .new-comments__card {
+    width: 55%;
+  }
+  .new-comments__text-title-area {
+    margin-top: 24px;
+    justify-content: flex-start;
+    margin-left: 1rem;
+  }
+  .new-comments__name {
+    width: 15%;
+  }
+  .new-comments__comment {
+    margin-bottom: 24px;
+    margin-top: 6px;
+  }
+  .new-comments__image {
+    margin-top: 24px;
+  }
+}

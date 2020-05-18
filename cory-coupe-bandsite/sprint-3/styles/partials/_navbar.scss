@@ -1,0 +1,99 @@
+.nav {
+  display: flex;
+  background-color: $paragraph-text;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 5rem;
+
+  &__logo {
+    display: flex;
+    text-transform: uppercase;
+    @include font(1.2rem, $text-color-alt);
+    margin-top: 0.9rem;
+    font-family: $regular-text;
+    text-decoration: none;
+  }
+  &__logo-text {
+    text-decoration: none;
+    color: $text-background-fill;
+  }
+  &__menu {
+    display: flex;
+    justify-content: space-around;
+    @include font(1rem, $text-color-alt);
+    margin: 0;
+    padding: 0;
+  }
+  &__menu-text--normal {
+    font-weight: lighter;
+    color: $text-label;
+    font-family: $demi-text;
+    border-bottom: 6px solid $paragraph-text;
+  }
+  &__menu-text--underline {
+    color: $text-label;
+    font-weight: 550;
+    font-family: $bold-text;
+    border-bottom: 6px solid $text-color-alt;
+  }
+  &__menu-text-container {
+    display: flex;
+    width: 50%;
+  }
+  &__menu-text {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .h1-text {
+    font-weight: lighter;
+  }
+}
+@include mobile {
+  .nav__menu {
+    width: 100vw;
+  }
+}
+@include tablet {
+  .nav {
+    justify-content: flex-start;
+    align-items: center;
+
+    &__logo {
+      display: flex;
+      text-transform: uppercase;
+      @include font(1.5rem, $text-color-alt);
+      margin-top: 0;
+      margin-left: 1.8rem;
+    }
+    &__menu {
+      justify-content: space-evenly;
+      width: 45%;
+      height: 100%;
+      margin-left: 3.8rem;
+    }
+    &__menu-text-container {
+      margin-left: 3.8rem;
+    }
+  }
+}
+@include desktop {
+  .nav {
+    height: 5rem;
+    &__logo {
+      margin-left: 12.5vw;
+    }
+    &__menu {
+      width: 13.9%;
+    }
+    &__menu-text-container {
+      margin-left: 1.2vw;
+    }
+    &__menu-text--normal {
+      margin-left: 2.2vw;
+    }
+  }
+}
