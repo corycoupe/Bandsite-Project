@@ -9,7 +9,11 @@ function VideoList({ videoListArray, mainId }) {
         .map((video) => (
           <div className="video-list__block">
             <div className="video-list__image">
-              <img className="video-list__image--src" src={video.image} />
+              <img
+                className="video-list__image--src"
+                src={video.image}
+                alt=""
+              />
             </div>
             <div className="video-list__text-area">
               <h3 className="video-list__text-area--head">{video.title}</h3>

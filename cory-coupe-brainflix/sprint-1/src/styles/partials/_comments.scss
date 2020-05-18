@@ -3,7 +3,6 @@
     display: flex;
     width: 90%;
     flex-direction: row;
-    flex-wrap: wrap;
     padding-bottom: 1.5rem;
     border-bottom: 2px solid $text-color-alt;
     margin-left: 1rem;
@@ -59,6 +58,10 @@
     margin-top: 0.2rem;
     width: 100%;
   }
+  .text-field:focus {
+    border-color: $brainflix-lightblue;
+    outline: none;
+  }
 }
 
 @include tablet {
@@ -95,6 +98,13 @@
     .text-field {
       width: 100%;
       font-size: $h4-paragraph;
+    }
+  }
+}
+@include desktop {
+  .comments {
+    &__input-group {
+      width: 27.25rem;
     }
   }
 }

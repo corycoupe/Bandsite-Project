@@ -6,7 +6,7 @@ function Header() {
   return (
     <header className="header">
       <div className="header__logo">
-        <img src={logo} className="header__logo-brainflix" />
+        <img src={logo} className="header__logo-brainflix" alt="brainflix" />
       </div>
       <div className="header__search">
         <input
@@ -15,12 +15,17 @@ function Header() {
           placeholder="Search"
         />
         <button className="header__search-button">
-          <img className="header__search-button--img" src={upload}></img>
+          <img
+            className="header__search-button--img"
+            src={upload}
+            alt="upload"
+          ></img>
           <p className="header__search-button--text">UPLOAD </p>
         </button>
         <img
           src="./images/Mohan-muruge.jpg"
           className="header__search-mohan mohan-image"
+          alt=""
         ></img>
       </div>
     </header>

@@ -87,6 +87,9 @@ body {
     background-color: black;
     display: flex;
     justify-content: center;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
 
     &__video {
       width: 43.75rem;
@@ -115,6 +118,22 @@ body {
     }
     &__btn-group {
       margin-right: 1rem;
+    }
+  }
+}
+@include desktop {
+  .video {
+    height: auto;
+  }
+  .video-player {
+    height: 540px;
+    width: 200%;
+
+    &__video {
+      width: 59rem;
+    }
+    &__progress-bar {
+      width: 46.938rem;
     }
   }
 }

@@ -66,6 +66,7 @@
     flex-direction: row;
     height: 80px;
     align-items: flex-end;
+    justify-content: space-between;
 
     &__logo {
       margin-right: 10.563rem;
@@ -76,6 +77,7 @@
       flex-direction: row;
       flex-wrap: nowrap;
       align-items: flex-end;
+      margin-right: 1rem;
     }
     &__search-button {
       width: 7rem;
@@ -90,6 +92,14 @@
     }
     &__search-button--text {
       font-size: $h4-paragraph;
+    }
+  }
+}
+@include desktop {
+  .header {
+    justify-content: space-between;
+    &__logo {
+      margin-right: 31.813rem;
     }
   }
 }

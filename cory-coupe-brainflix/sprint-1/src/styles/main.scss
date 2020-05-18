@@ -40,5 +40,13 @@ textarea {
     display: flex;
     flex-direction: row;
     width: 100%;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  .section-comments {
+    width: 50%;
+  }
+  .section-videos {
+    width: 30%;
   }
 }

@@ -20,6 +20,7 @@ function Description({ mainVideo }) {
             <img
               src={view}
               className="description__header-views--image views-likes--image"
+              alt=""
             ></img>
             <p className="description__header-views--count views-likes--paragraph">
               {mainVideo.views}
@@ -29,6 +30,7 @@ function Description({ mainVideo }) {
             <img
               src={likes}
               className="description__header-likes--image views-likes--image"
+              alt=""
             ></img>
             <p className="description__header-likes--count views-likes--paragraph">
               {mainVideo.likes}

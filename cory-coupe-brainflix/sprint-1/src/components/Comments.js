@@ -10,6 +10,7 @@ function Comments() {
           <img
             src="./images/Mohan-muruge.jpg"
             className="comments__mohan-image mohan-image"
+            alt="Mohan"
           />
         </div>
         <div className="comments__input">

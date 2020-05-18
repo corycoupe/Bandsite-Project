@@ -110,12 +110,12 @@ class App extends React.Component {
         <Header />
         <Video image={mainVideo.image} />
         <main className="main-container">
-          <section>
+          <section className="section-comments">
             <Description mainVideo={mainVideo} />
             <Comments />
             <NewComments comments={mainVideo.comments} />
           </section>
-          <section>
+          <section className="section-videos">
             <VideoList
               videoListArray={videoListArray}
               mainId={mainVideo.id}

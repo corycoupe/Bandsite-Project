@@ -118,6 +118,9 @@
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .header__logo {
     margin-right: 10.563rem;
@@ -136,6 +139,7 @@
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+    margin-right: 1rem;
   }
   .header__search-button {
     width: 7rem;
@@ -150,6 +154,17 @@
   }
   .header__search-button--text {
     font-size: 0.875rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header__logo {
+    margin-right: 31.813rem;
   }
 }
 
@@ -272,6 +287,9 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
   }
   .video-player__video {
     width: 43.75rem;
@@ -307,6 +325,22 @@ body {
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .video {
+    height: auto;
+  }
+  .video-player {
+    height: 540px;
+    width: 200%;
+  }
+  .video-player__video {
+    width: 59rem;
+  }
+  .video-player__progress-bar {
+    width: 46.938rem;
+  }
+}
+
 .comments__post-comments {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -316,8 +350,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   padding-bottom: 1.5rem;
   border-bottom: 2px solid #e1e1e1;
   margin-left: 1rem;
@@ -394,6 +426,11 @@ body {
   width: 100%;
 }
 
+.comments .text-field:focus {
+  border-color: #0095ff;
+  outline: none;
+}
+
 @media screen and (min-width: 768px) {
   .comments__header-comment-count {
     font-size: 1rem;
@@ -443,6 +480,12 @@ body {
   .comments .text-field {
     width: 100%;
     font-size: 0.875rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .comments__input-group {
+    width: 27.25rem;
   }
 }
 
@@ -798,6 +841,12 @@ body {
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .description .views-likes--paragraph {
+    margin-right: 2rem;
+  }
+}
+
 html,
 body {
   margin: 0;
@@ -842,6 +891,17 @@ textarea {
         -ms-flex-direction: row;
             flex-direction: row;
     width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .section-comments {
+    width: 50%;
+  }
+  .section-videos {
+    width: 30%;
   }
 }
 /*# sourceMappingURL=main.css.map */
